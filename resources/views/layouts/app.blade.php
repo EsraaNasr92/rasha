@@ -160,9 +160,9 @@
                         </a>
                     </li>
                     <li>
-                        <a href="side-menu-light-post.html" class="menu">
+                        <a href="{{ route ('gallery.index') }}" class="menu">
                             <div class="menu__icon"> <i data-lucide="file-text"></i> </div>
-                            <div class="menu__title"> Post </div>
+                            <div class="menu__title"> Gallery </div>
                         </a>
                     </li>
                     <li>
@@ -646,9 +646,9 @@
                         </a>
                     </li>
                     <li>
-                        <a href="side-menu-light-post.html" class="side-menu">
+                        <a href="{{ route ('gallery.index') }}" class="side-menu">
                             <div class="side-menu__icon"> <i data-lucide="file-text"></i> </div>
-                            <div class="side-menu__title"> Post </div>
+                            <div class="side-menu__title"> Gallery </div>
                         </a>
                     </li>
                     @can('manageUsers', App\Models\User::class)

@@ -64,6 +64,10 @@ Route::resource('/admin/app', 'App\Http\Controllers\Admin\AppSettingsController'
     'show'
 ]]);
 
+Route::resource('/admin/gallery', 'App\Http\Controllers\Admin\ImageGalleryController', ['except' => [
+    'show'
+]]); 
+
 Route::group(['middleware' => 'auth'], function() {
     Route::get('/admin/settings',[App\Http\Controllers\Admin\SettingsController::class, 'showChangePasswordGet'])->name('changePasswordGet');
     Route::post('/admin/settings',[App\Http\Controllers\Admin\SettingsController::class, 'changePasswordPost'])->name('changePasswordPost');
