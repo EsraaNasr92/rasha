@@ -102,6 +102,11 @@ Route::get('/services/{slug}', [App\Http\Controllers\ServicesController::class, 
 Route::get('/gallery', [App\Http\Controllers\PortfolioController::class, 'index'])->name('portfolio');
 Route::get('/portfolio/{slug}', [App\Http\Controllers\PortfolioController::class, 'view'])->name('portfolio.view');
 
+
+Route::get('/contact-me', [App\Http\Controllers\ContactController::class, 'index']);
+Route::post('/contact-me', [App\Http\Controllers\ContactController::class, 'store'])->name('contact.me.store');
+
+
 Route::get('/artisan-link', function () {
     Artisan::call('storage:link');
 });
