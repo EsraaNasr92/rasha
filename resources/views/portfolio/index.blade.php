@@ -1,28 +1,31 @@
-@extends('layouts.frontend')
+@extends('layouts.inner')
 
-@section('title') {{ 'portfolio' }} @endsection
+@section('title') {{ 'Gallery' }} @endsection
 
 @section('content')
 <div class="container">
-    @foreach($portfolio as $portfolio)
+<!-- BEGIN: Portfolio section Gallery insted of portfolio-->
 
-        <article>
-            <h2>
-                <a href="{{ route('portfolio.view' , ['slug' => $portfolio->slug])}}">{{$portfolio->title}}</a>
-            </h2>
-            <><p class="text-muted">{{ $portfolio->categoryp ? $portfolio->categoryp->name : 'Uncategorized' }}</p>
-            @if($portfolio->image != null)
-                <img height="100" width=100 src="{{ asset('uploads/portfolio/' . $portfolio->image) }}">
-            @else
-                <img height="100" width=100 src="{{ asset('uploads/post_placeholder.jpeg') }}">
-            @endif
+    <section class="portfolio section-padding" id="portfolio">
+        <div class="container">
+            <!-- Photo Grid -->
+            <div class="row-img"> 
+                @foreach($portfolio as $i => $portfolio)
+                    <div class="column-img">
+                        @if($portfolio->image != null)
+                        <a href="{{ asset('uploads/portfolio/' . $portfolio->image) }}" class="image-popup">
+                            <img src="{{ asset('uploads/portfolio/' . $portfolio->image) }}" class="img-fluid portfolio-image" alt="">
+                        </a>
+                        @else
+                            <img class="img-fluid portfolio-image" src="{{ asset('uploads/post_placeholder.jpeg') }}">
+                        @endif
+                    </div>
+                @endforeach
+
+             </div>
+        </div>
+    </section><!-- END: Portfolio section -->
 
 
-            <p>{{$portfolio->content}}</p>
-
-
-        </article>
-
-    @endforeach
 </div>
 @endsection

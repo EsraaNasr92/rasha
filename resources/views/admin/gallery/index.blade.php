@@ -78,14 +78,14 @@
                                         <div class="dropdown-menu w-40">
                                             <ul class="dropdown-content">
                                                 <li>
-                                                    <a href="" class="dropdown-item"> <i data-lucide="trash" class="w-4 h-4 mr-2"></i> 
+                                                
                                                     <form action="{{ route('gallery.destroy',$image->id) }}" method="POST" >
                                                         @csrf
                                                         @method('DELETE')
 
-                                                        <button type="submit"  onclick="return confirm('Sure Want Delete?')">Delete</button>
+                                                        <button type="submit" class="" onclick="return confirm('Sure Want Delete?')">Delete</button>
                                                     </form>
-                                                    </a>
+                                                    
                                                 </li>
                                             </ul>
                                         </div>
@@ -101,7 +101,6 @@
                     @endif
 
                 </div>
-
 
       <!--   
 <div class="container">

@@ -87,10 +87,11 @@ Route::get('delete-menuitem/{id}/{key}/{in?}',[App\Http\Controllers\Admin\MenuCo
 Route::get('delete-menu/{id}',[App\Http\Controllers\Admin\MenuController::class,'destroy']);
 
 
+Route::get('/about', [App\Http\Controllers\AboutController::class, 'index']);
+Route::get('/portfolio', [App\Http\Controllers\GalleryController::class, 'index']);
 
 Route::get('/blog', [App\Http\Controllers\BlogPostController::class, 'index'])->name('blog');
 Route::get('/blog/{slug}', [App\Http\Controllers\BlogPostController::class, 'view'])->name('blog.view');
-
 
 Route::get('/partner', [App\Http\Controllers\PartnerController::class, 'index'])->name('partner');
 Route::get('/partner/{slug}', [App\Http\Controllers\PartnerController::class, 'view'])->name('partner.view');
@@ -98,7 +99,7 @@ Route::get('/partner/{slug}', [App\Http\Controllers\PartnerController::class, 'v
 Route::get('/services', [App\Http\Controllers\ServicesController::class, 'index'])->name('services');
 Route::get('/services/{slug}', [App\Http\Controllers\ServicesController::class, 'view'])->name('services.view');
 
-Route::get('/portfolio', [App\Http\Controllers\PortfolioController::class, 'index'])->name('portfolio');
+Route::get('/gallery', [App\Http\Controllers\PortfolioController::class, 'index'])->name('portfolio');
 Route::get('/portfolio/{slug}', [App\Http\Controllers\PortfolioController::class, 'view'])->name('portfolio.view');
 
 Route::get('/artisan-link', function () {
