@@ -8,6 +8,7 @@ use App\Models\Partners;
 use App\Models\Banner;
 use App\Models\Services;
 use App\Models\Portfolio;
+use App\Models\About;
 
 class HomeController extends Controller
 {
@@ -26,6 +27,7 @@ class HomeController extends Controller
         $banner = Banner::first(); 
         $service = Services::paginate(3); 
         $portfolio = Portfolio::paginate(5); 
+        $about = About::all();
         
        
         return view('home.index')
@@ -33,6 +35,7 @@ class HomeController extends Controller
               ->with('partner', $partner)
               ->with('banner', $banner)
               ->with('service', $service)
-              ->with('portfolio', $portfolio);
+              ->with('portfolio', $portfolio)
+              ->with('about', $about);
     }
 }

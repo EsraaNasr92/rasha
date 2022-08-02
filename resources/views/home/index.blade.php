@@ -51,34 +51,29 @@
 
 <!-- BEGIN: Text of block & slider section -->
 <section class="section-padding pb-0" id="about">
+    @foreach($about as $about)
     <div class="container mb-5 pb-lg-5">
         <div class="row">
             <div class="col-12">
-                <h2 class="mb-3" data-aos="fade-up">I am Rasha Aldeeb...</h2>
+                <h2 class="mb-3" data-aos="fade-up">{{$about->title}}</h2>
             </div>
 
             <div class="col-lg-6 col-12 mt-3 mb-lg-5">
                 <p class="me-4" data-aos="fade-up" data-aos-delay="300">
-                    a five-year-experience podcast consultant and seven-year-experience audio producer. 
-                    Throughout these years, I have produced 11 podcasts.
-                    I have learned the professional flow of building a podcast project from A to Z.<br><br>
-                                
-                    Thus, I have had the capacity to establish four international podcasts from scratch to a number of international
-                    organizations, as a part & member of supportive teams
-                    </p>
+                    {!! $about->text_left !!}
+                </p>
             </div>
 
             <div class="col-lg-6 col-12 mt-lg-3 mb-lg-5">
                 <p data-aos="fade-up" data-aos-delay="500">
-                    The skills which I share with every team I work with are, my solid experience in podcasting according to what 
-                    I constantly do and what I reflect on completed and running podcast projects from building the vision & identity
+                    {!! $about->text_right !!}
                 </p>
-                 <a data-aos="fade-up" data-aos-delay="700" href="about.html"><p class="text-warning">Know more about me</p></a>
+                 <a data-aos="fade-up" data-aos-delay="700" href="{{ $about->btn_url }}"><p class="text-warning">{{ $about->btn_title }}</p></a>
             </div>
 
         </div>
     </div> 
-
+    @endforeach
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-3 col-12 p-0">      
