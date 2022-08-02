@@ -9,7 +9,7 @@
                     </h2>
                 </div>
                 <div class="intro-y flex flex-col sm:flex-row items-center mt-8">
-                    <form action="{{ url('admin/gallery') }}" class="form-image-upload" method="POST" enctype="multipart/form-data">
+                    <form action="{{ url('admin/slider') }}" class="form-image-upload" method="POST" enctype="multipart/form-data">
                         {!! csrf_field() !!}
                         
                         @if (count($errors) > 0)
@@ -35,9 +35,6 @@
                         @endif
 
                         <div class="row">
-                            <div class="col-md-5">
-                                <input type="text" name="title" class="intro-y form-control py-3 px-4 box pr-10" placeholder="Title">
-                            </div>
                             <div class="mt-3">
                                 <div class="border-2 border-dashed dark:border-darkmode-400 rounded-md pt-4">
                                     <div class="px-4 pb-4 flex items-center cursor-pointer relative">
@@ -70,16 +67,13 @@
                         @foreach($images as $image)
                             <div class="intro-y col-span-12 md:col-span-6 xl:col-span-4 box">
                                 <div class="flex items-center border-b border-slate-200/60 dark:border-darkmode-400 px-5 py-4">
-                                <div class="ml-3 mr-auto">
-                                    <a href="" class="font-medium">Image name: {{ $image->title }}</a> 
-                                </div>
                                     <div class="dropdown ml-3">
                                         <a href="javascript:;" class="dropdown-toggle w-5 h-5 text-slate-500" aria-expanded="false" data-tw-toggle="dropdown"> <i data-lucide="more-vertical" class="w-4 h-4"></i> </a>
                                         <div class="dropdown-menu w-40">
                                             <ul class="dropdown-content">
                                                 <li>
                                                 
-                                                    <form action="{{ route('gallery.destroy',$image->id) }}" method="POST" >
+                                                    <form action="{{ route('slider.destroy',$image->id) }}" method="POST" >
                                                         @csrf
                                                         @method('DELETE')
 
@@ -93,7 +87,7 @@
                                 </div>
                                 <div class="p-5">
                                     <div class="h-40 2xl:h-56 image-fit">
-                                        <img alt="" class="rounded-md" src="{{ asset('uploads/gallery/' . $image->image) }}">
+                                        <img alt="" class="rounded-md" src="{{ asset('uploads/' . $image->image) }}">
                                     </div>
                                 </div>
                             </div>

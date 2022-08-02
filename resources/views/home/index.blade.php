@@ -22,7 +22,7 @@
     </div>
 
     <div class="imgWrapper">
-        <img src="images/rasha_banner.jpg" alt="Rasha Eldeeb" class="img-fluid">
+        <img src="{{ asset('uploads/' .$banner->image) }}" alt="{{$banner->title}}" class="img-fluid">
     </div>
 
     <div class="overlay"></div>
@@ -77,20 +77,20 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-3 col-12 p-0">      
-                <img src="images/side_image.jpg" class="img-fluid about-image" alt="">
+                <img src="{{ asset('uploads/' .$middle->image) }}" class="img-fluid about-image" alt="">
             </div>
 
             <div class="col-lg-3 col-12 bg-dark">  
                 <div class="d-flex flex-column flex-wrap justify-content-center h-100 py-5 px-4 pt-lg-4 pb-lg-0">
-                    <h3 class="text-white mb-3" data-aos="fade-up">Podcast consultant</h3>
+                    <h3 class="text-white mb-3" data-aos="fade-up">{{$middle->title}}</h3>
 
-                    <p class="text-secondary-white-color" data-aos="fade-up">a five-year-experience</p>
+                    <p class="text-secondary-white-color" data-aos="fade-up">{{$middle->subtitle}}</p>
 
                     <div class="mt-3 custom-links">
                                         
-                        <a href="#news" class="text-white custom-link" data-aos="zoom-in" data-aos-delay="100">Read News & Events</a>
+                        <a href="{{ $middle->btn_url_1 }}" class="text-white custom-link" data-aos="zoom-in" data-aos-delay="100">{{ $middle->btn_title_1 }}</a>
 
-                        <a href="contact.html" class="text-white custom-link" data-aos="zoom-in" data-aos-delay="300">Work with Me</a>
+                        <a href="{{ $middle->btn_url_2 }}" class="text-white custom-link" data-aos="zoom-in" data-aos-delay="300">{{ $middle->btn_title_2 }}</a>
                     </div>
 
                 </div>
@@ -99,24 +99,11 @@
             <div class="col-lg-6 col-12 p-0">  
                 <section id="myCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
                     <div class="carousel-inner">
-
-                        <div class="carousel-item active">
-                            <img src="images/slider/first_pic.jpg" class="img-fluid team-image" alt="">
+                        @foreach($slider as $key => $slider)
+                        <div class="carousel-item {{$key == 0 ? 'active' : '' }}">
+                            <img src="{{ asset('uploads/' .$slider->image) }}" class="img-fluid team-image"  alt="..."> 
                         </div>
-
-                        <div class="carousel-item">
-                            <img src="images/slider/second_pic.jpg" class="img-fluid team-image" alt="">
-                        </div>
-                                        
-                        <div class="carousel-item">
-                            <img src="images/slider/last_pic.jpg" class="img-fluid team-image" alt="">
-                        </div>
-
-                                        
-                        <div class="carousel-item">
-                            <img src="images/slider/third_pic.jpg" class="img-fluid team-image" alt="">
-                        </div>
-
+                        @endforeach
                     </div>
 
                     <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">

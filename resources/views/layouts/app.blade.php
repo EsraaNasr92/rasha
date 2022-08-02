@@ -412,9 +412,14 @@
                                     <div class="menu__title"> About section </div>
                                 </a>
                             </li>
-
                             <li>
-                                <a href="side-menu-light-loading-icon.html" class="menu">
+                                <a href="{{ route('middle.index') }}" class="menu">
+                                    <div class="menu__icon"> <i data-lucide="activity"></i> </div>
+                                    <div class="menu__title"> Middle </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ route('slider.index') }}" class="menu">
                                     <div class="menu__icon"> <i data-lucide="activity"></i> </div>
                                     <div class="menu__title"> Slider </div>
                                 </a>
@@ -645,23 +650,24 @@
                                     <div class="side-menu__icon"> <i data-lucide="activity"></i> </div>
                                     <div class="side-menu__title">
                                         About section 
-                                        <div class="side-menu__sub-icon "> <i data-lucide="chevron-down"></i> </div>
                                     </div>
                                 </a>
-                                <ul class="">
-                                    <li>
-                                        <a href="side-menu-light-regular-table.html" class="side-menu">
-                                            <div class="side-menu__icon"> <i data-lucide="zap"></i> </div>
-                                            <div class="side-menu__title">Regular Table</div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="side-menu-light-tabulator.html" class="side-menu">
-                                            <div class="side-menu__icon"> <i data-lucide="zap"></i> </div>
-                                            <div class="side-menu__title">Tabulator</div>
-                                        </a>
-                                    </li>
-                                </ul>
+                            </li>
+                            <li>
+                                <a href="{{ route('middle.index') }}" class="side-menu">
+                                    <div class="side-menu__icon"> <i data-lucide="activity"></i> </div>
+                                    <div class="side-menu__title">
+                                        Middle section 
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ route('slider.index') }}" class="side-menu">
+                                    <div class="side-menu__icon"> <i data-lucide="activity"></i> </div>
+                                    <div class="side-menu__title">
+                                        Slider
+                                    </div>
+                                </a>
                             </li>
                         </ul>
                     </li>

@@ -9,6 +9,8 @@ use App\Models\Banner;
 use App\Models\Services;
 use App\Models\Portfolio;
 use App\Models\About;
+use App\Models\Middle;
+use App\Models\Slider;
 
 class HomeController extends Controller
 {
@@ -28,6 +30,8 @@ class HomeController extends Controller
         $service = Services::paginate(3); 
         $portfolio = Portfolio::paginate(5); 
         $about = About::all();
+        $slider = Slider::all();
+        $middle = Middle::first();
         
        
         return view('home.index')
@@ -36,6 +40,9 @@ class HomeController extends Controller
               ->with('banner', $banner)
               ->with('service', $service)
               ->with('portfolio', $portfolio)
-              ->with('about', $about);
+              ->with('about', $about)
+              ->with('middle', $middle)
+              ->with('slider', $slider);
+
     }
 }

@@ -68,8 +68,15 @@ Route::resource('/admin/gallery', 'App\Http\Controllers\Admin\ImageGalleryContro
     'show'
 ]]); 
 
+Route::resource('/admin/slider', 'App\Http\Controllers\Admin\SliderController', ['except' => [
+    'show'
+]]); 
 
 Route::resource('/admin/about', 'App\Http\Controllers\Admin\AboutController', ['except' => [
+    'show'
+]]);
+
+Route::resource('/admin/middle', 'App\Http\Controllers\Admin\MiddleController', ['except' => [
     'show'
 ]]);
 
