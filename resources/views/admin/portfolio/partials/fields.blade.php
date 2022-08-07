@@ -75,36 +75,14 @@
                     <div class="col-span-12 lg:col-span-4">
                         <div class="intro-y box p-5">
                             <div class="mt-3">
-                                <label for="category_id" class="form-label">Categories</label>
-                                <select data-placeholder="Select categories" class="tom-select w-full" name="categoryp_id" required>
-                                    <option value="">Select a Category</option>
-
-                                    @foreach ($categories as $category)
-                                        <option value="{{ $category->id }}" {{ $category->id == $model->category_id ? 'selected' : '' }}>{{ $category->name }}</option>
-                                        @if ($category->children)
-                                            @foreach ($category->children as $child)
-                                                <option value="{{ $child->id }}" {{ $child->id == $model->category_id ? 'selected' : '' }}>&nbsp;&nbsp;{{ $child->name }}</option>
-                                            @endforeach
-                                        @endif
+                            <label for="categoryp_id" class="form-label">Categories</label>
+                                <select data-placeholder="Select categories" class="tom-select w-full" name="categoryp_id" id="post-form-3" multiple>
+                                    @foreach ($categories as $categoryp)
+                                        <option value="{{ $categoryp->id }}"{{ $categoryp->id == $model->categoryp_id ? 'selected' : '' }}>{{ $categoryp->name }}</option>   
                                     @endforeach
                                 </select>
+                            </div>
 
-
-                            </div>
-                            <div class="mt-3">
-                                <label for="post-form-4" class="form-label">Tags</label>
-                                <select data-placeholder="Select your favorite actors" class="tom-select w-full" id="post-form-4" multiple>
-                                    <option value="1" selected>Leonardo DiCaprio</option>
-                                    <option value="2">Johnny Deep</option>
-                                    <option value="3" selected>Robert Downey, Jr</option>
-                                    <option value="4">Samuel L. Jackson</option>
-                                    <option value="5">Morgan Freeman</option>
-                                </select>
-                            </div>
-                            <div class="form-check form-switch flex flex-col items-start mt-3">
-                                <label for="post-form-5" class="form-check-label ml-0 mb-2">Published</label>
-                                <input id="post-form-5" class="form-check-input" type="checkbox">
-                            </div>
                         </div>
                     </div>
                     <!-- END: project Info -->

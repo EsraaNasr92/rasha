@@ -9,64 +9,26 @@
 
     <title>{{ config('app.name', 'AdminPanel') }}</title>
 
-
-
-    <!-- Fonts -->
-
-
-    <!-- BEGIN: CSS Assets-->
+    <!-- BEGIN: CSS Assets -->
         <link rel="stylesheet" href="{{ asset('dist/css/app.css') }}" />
-       
-    <!-- END: CSS Assets-->
+    <!-- END: CSS Assets -->
 
-   
+    <!-- BEGIN: Script links -->
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    
-    
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>  
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    
-    
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-sortable/0.9.13/jquery-sortable.js"></script>
-    
-
-   <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.0/moment.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.0/moment.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.39.0/js/tempusdominus-bootstrap-4.min.js" integrity="sha512-k6/Bkb8Fxf/c1Tkyl39yJwcOZ1P4cRrJu77p83zJjN2Z55prbFHxPs9vN7q3l3+tSMGPDdoH51AEU8Vgo1cgAA==" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.39.0/css/tempusdominus-bootstrap-4.min.css" integrity="sha512-3JRrEUwaCkFUBLK1N8HehwQgu8e23jTH4np5NHOmQOobuC4ROQxFwFgBLTnhcnQRMs84muMh0PnnwXlPq5MGjg==" crossorigin="anonymous" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-sortable/0.9.13/jquery-sortable.js"></script>
--->
-    <!-- Styles 
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
-    
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
-    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
-    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
-    
-    
-    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.0/moment.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.39.0/js/tempusdominus-bootstrap-4.min.js" integrity="sha512-k6/Bkb8Fxf/c1Tkyl39yJwcOZ1P4cRrJu77p83zJjN2Z55prbFHxPs9vN7q3l3+tSMGPDdoH51AEU8Vgo1cgAA==" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.39.0/css/tempusdominus-bootstrap-4.min.css" integrity="sha512-3JRrEUwaCkFUBLK1N8HehwQgu8e23jTH4np5NHOmQOobuC4ROQxFwFgBLTnhcnQRMs84muMh0PnnwXlPq5MGjg==" crossorigin="anonymous" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-sortable/0.9.13/jquery-sortable.js"></script>
-    -->
+    <!-- END: Script links -->
 
 </head>
 <body class="py-5">
-@guest
-@else
+        @guest
+        @else
         <!-- BEGIN: Mobile Menu -->
         <div class="mobile-menu md:hidden">
             <div class="mobile-menu-bar">
                 <a href="" class="flex mr-auto">
-                    {{ config('app.name', 'Laravel') }}
+                    {{ config('app.name', 'Webmaco') }}
                 </a>
                 <a href="javascript:;" class="mobile-menu-toggler"> <i data-lucide="bar-chart-2" class="w-8 h-8 text-white transform -rotate-90"></i> </a>
             </div>
@@ -79,118 +41,7 @@
                             <div class="menu__title"> Dashboard <i data-lucide="chevron-down" class="menu__sub-icon transform rotate-180"></i> </div>
                         </a>
                     </li>
-                    <li>
-                        <a href="{{ route('banner.index') }}" class="menu">
-                            <div class="menu__icon"> <i data-lucide="box"></i> </div>
-                            <div class="menu__title">  Main Bannert <i data-lucide="chevron-down" class="menu__sub-icon "></i> </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:;" class="menu">
-                            <div class="menu__icon"> <i data-lucide="shopping-bag"></i> </div>
-                            <div class="menu__title"> E-Commerce <i data-lucide="chevron-down" class="menu__sub-icon "></i> </div>
-                        </a>
-                        <ul class="">
-                            <li>
-                                <a href="side-menu-light-categories.html" class="menu">
-                                    <div class="menu__icon"> <i data-lucide="activity"></i> </div>
-                                    <div class="menu__title"> Categories </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="side-menu-light-add-product.html" class="menu">
-                                    <div class="menu__icon"> <i data-lucide="activity"></i> </div>
-                                    <div class="menu__title"> Add Product </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:;" class="menu">
-                                    <div class="menu__icon"> <i data-lucide="activity"></i> </div>
-                                    <div class="menu__title"> Products <i data-lucide="chevron-down" class="menu__sub-icon "></i> </div>
-                                </a>
-                                <ul class="">
-                                    <li>
-                                        <a href="side-menu-light-product-list.html" class="menu">
-                                            <div class="menu__icon"> <i data-lucide="zap"></i> </div>
-                                            <div class="menu__title">Product List</div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="side-menu-light-product-grid.html" class="menu">
-                                            <div class="menu__icon"> <i data-lucide="zap"></i> </div>
-                                            <div class="menu__title">Product Grid</div>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="javascript:;" class="menu">
-                                    <div class="menu__icon"> <i data-lucide="activity"></i> </div>
-                                    <div class="menu__title"> Sellers <i data-lucide="chevron-down" class="menu__sub-icon "></i> </div>
-                                </a>
-                                <ul class="">
-                                    <li>
-                                        <a href="side-menu-light-seller-list.html" class="menu">
-                                            <div class="menu__icon"> <i data-lucide="zap"></i> </div>
-                                            <div class="menu__title">Seller List</div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="side-menu-light-seller-detail.html" class="menu">
-                                            <div class="menu__icon"> <i data-lucide="zap"></i> </div>
-                                            <div class="menu__title">Seller Detail</div>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="side-menu-light-reviews.html" class="menu">
-                                    <div class="menu__icon"> <i data-lucide="activity"></i> </div>
-                                    <div class="menu__title"> Reviews </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li>
-                        <a href="{{ route('banner.index') }}" class="menu {{ (request()->is('admin/app')) ? 'side-menu--active' : '' }}">
-                            <div class="menu__icon"> <i data-lucide="hard-drive"></i> </div>
-                            <div class="menu__title"> Website settings </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ route ('gallery.index') }}" class="menu">
-                            <div class="menu__icon"> <i data-lucide="file-text"></i> </div>
-                            <div class="menu__title"> Portfolio / logos</div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="side-menu-light-calendar.html" class="menu">
-                            <div class="menu__icon"> <i data-lucide="calendar"></i> </div>
-                            <div class="menu__title"> Calendar </div>
-                        </a>
-                    </li>
-                    <li class="menu__devider my-6"></li>
-                    <li>
-                        <a href="javascript:;" class="menu">
-                            <div class="menu__icon"> <i data-lucide="edit"></i> </div>
-                            <div class="menu__title"> Crud <i data-lucide="chevron-down" class="menu__sub-icon "></i> </div>
-                        </a>
-                        <ul class="">
-                            <li>
-                                <a href="side-menu-light-crud-data-list.html" class="menu">
-                                    <div class="menu__icon"> <i data-lucide="activity"></i> </div>
-                                    <div class="menu__title"> Data List </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="side-menu-light-crud-form.html" class="menu">
-                                    <div class="menu__icon"> <i data-lucide="activity"></i> </div>
-                                    <div class="menu__title"> Form </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
+                    @can('manageUsers', App\Models\User::class)
                     <li>
                         <a href="javascript:;" class="menu">
                             <div class="menu__icon"> <i data-lucide="users"></i> </div>
@@ -200,231 +51,130 @@
                             <li>
                                 <a href="side-menu-light-users-layout-1.html" class="menu">
                                     <div class="menu__icon"> <i data-lucide="activity"></i> </div>
-                                    <div class="menu__title"> Layout 1 </div>
+                                    <div class="menu__title"> List </div>
                                 </a>
                             </li>
-                            <li>
-                                <a href="side-menu-light-users-layout-2.html" class="menu">
-                                    <div class="menu__icon"> <i data-lucide="activity"></i> </div>
-                                    <div class="menu__title"> Layout 2 </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="side-menu-light-users-layout-3.html" class="menu">
-                                    <div class="menu__icon"> <i data-lucide="activity"></i> </div>
-                                    <div class="menu__title"> Layout 3 </div>
-                                </a>
-                            </li>
+
                         </ul>
                     </li>
                     <li>
-                        <a href="javascript:;" class="menu">
-                            <div class="menu__icon"> <i data-lucide="trello"></i> </div>
-                            <div class="menu__title"> Profile <i data-lucide="chevron-down" class="menu__sub-icon "></i> </div>
+                        <a href="{{ route ('menu.index') }}" class="menu">
+                            <div class="menu__icon"> <i data-lucide="box"></i> </div>
+                            <div class="menu__title">  Menu <i data-lucide="chevron-down" class="menu__sub-icon "></i> </div>
                         </a>
-                        <ul class="">
-                            <li>
-                                <a href="side-menu-light-profile-overview-1.html" class="menu">
-                                    <div class="menu__icon"> <i data-lucide="activity"></i> </div>
-                                    <div class="menu__title"> Overview 1 </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="side-menu-light-profile-overview-2.html" class="menu">
-                                    <div class="menu__icon"> <i data-lucide="activity"></i> </div>
-                                    <div class="menu__title"> Overview 2 </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="side-menu-light-profile-overview-3.html" class="menu">
-                                    <div class="menu__icon"> <i data-lucide="activity"></i> </div>
-                                    <div class="menu__title"> Overview 3 </div>
-                                </a>
-                            </li>
-                        </ul>
+                    </li>
+                    @endcan
+                    <li class="menu__devider my-6"></li>
+                    <li>
+                        <a href="{{ route('banner.index') }}" class="menu">
+                            <div class="menu__icon"> <i data-lucide="box"></i> </div>
+                            <div class="menu__title">  Main Banner <i data-lucide="chevron-down" class="menu__sub-icon "></i> </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route ('gallery.index') }}" class="menu">
+                            <div class="menu__icon"> <i data-lucide="file-text"></i> </div>
+                            <div class="menu__title">logos</div>
+                        </a>
                     </li>
                     <li>
                         <a href="javascript:;" class="menu">
-                            <div class="menu__icon"> <i data-lucide="layout"></i> </div>
+                            <div class="menu__icon"> <i data-lucide="users"></i> </div>
                             <div class="menu__title"> Pages <i data-lucide="chevron-down" class="menu__sub-icon "></i> </div>
                         </a>
                         <ul class="">
                             <li>
-                                <a href="javascript:;" class="menu">
+                                <a href="{{ route('pages.index') }}" class="menu">
                                     <div class="menu__icon"> <i data-lucide="activity"></i> </div>
-                                    <div class="menu__title"> Wizards <i data-lucide="chevron-down" class="menu__sub-icon "></i> </div>
-                                </a>
-                                <ul class="">
-                                    <li>
-                                        <a href="side-menu-light-wizard-layout-1.html" class="menu">
-                                            <div class="menu__icon"> <i data-lucide="zap"></i> </div>
-                                            <div class="menu__title">Layout 1</div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="side-menu-light-wizard-layout-2.html" class="menu">
-                                            <div class="menu__icon"> <i data-lucide="zap"></i> </div>
-                                            <div class="menu__title">Layout 2</div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="side-menu-light-wizard-layout-3.html" class="menu">
-                                            <div class="menu__icon"> <i data-lucide="zap"></i> </div>
-                                            <div class="menu__title">Layout 3</div>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="javascript:;" class="menu">
-                                    <div class="menu__icon"> <i data-lucide="activity"></i> </div>
-                                    <div class="menu__title"> Blog <i data-lucide="chevron-down" class="menu__sub-icon "></i> </div>
-                                </a>
-                                <ul class="">
-                                    <li>
-                                        <a href="side-menu-light-blog-layout-1.html" class="menu">
-                                            <div class="menu__icon"> <i data-lucide="zap"></i> </div>
-                                            <div class="menu__title">Layout 1</div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="side-menu-light-blog-layout-2.html" class="menu">
-                                            <div class="menu__icon"> <i data-lucide="zap"></i> </div>
-                                            <div class="menu__title">Layout 2</div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="side-menu-light-blog-layout-3.html" class="menu">
-                                            <div class="menu__icon"> <i data-lucide="zap"></i> </div>
-                                            <div class="menu__title">Layout 3</div>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="javascript:;" class="menu">
-                                    <div class="menu__icon"> <i data-lucide="activity"></i> </div>
-                                    <div class="menu__title"> Pricing <i data-lucide="chevron-down" class="menu__sub-icon "></i> </div>
-                                </a>
-                                <ul class="">
-                                    <li>
-                                        <a href="side-menu-light-pricing-layout-1.html" class="menu">
-                                            <div class="menu__icon"> <i data-lucide="zap"></i> </div>
-                                            <div class="menu__title">Layout 1</div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="side-menu-light-pricing-layout-2.html" class="menu">
-                                            <div class="menu__icon"> <i data-lucide="zap"></i> </div>
-                                            <div class="menu__title">Layout 2</div>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="javascript:;" class="menu">
-                                    <div class="menu__icon"> <i data-lucide="activity"></i> </div>
-                                    <div class="menu__title"> Invoice <i data-lucide="chevron-down" class="menu__sub-icon "></i> </div>
-                                </a>
-                                <ul class="">
-                                    <li>
-                                        <a href="side-menu-light-invoice-layout-1.html" class="menu">
-                                            <div class="menu__icon"> <i data-lucide="zap"></i> </div>
-                                            <div class="menu__title">Layout 1</div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="side-menu-light-invoice-layout-2.html" class="menu">
-                                            <div class="menu__icon"> <i data-lucide="zap"></i> </div>
-                                            <div class="menu__title">Layout 2</div>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="javascript:;" class="menu">
-                                    <div class="menu__icon"> <i data-lucide="activity"></i> </div>
-                                    <div class="menu__title"> FAQ <i data-lucide="chevron-down" class="menu__sub-icon "></i> </div>
-                                </a>
-                                <ul class="">
-                                    <li>
-                                        <a href="side-menu-light-faq-layout-1.html" class="menu">
-                                            <div class="menu__icon"> <i data-lucide="zap"></i> </div>
-                                            <div class="menu__title">Layout 1</div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="side-menu-light-faq-layout-2.html" class="menu">
-                                            <div class="menu__icon"> <i data-lucide="zap"></i> </div>
-                                            <div class="menu__title">Layout 2</div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="side-menu-light-faq-layout-3.html" class="menu">
-                                            <div class="menu__icon"> <i data-lucide="zap"></i> </div>
-                                            <div class="menu__title">Layout 3</div>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="login-light-login.html" class="menu">
-                                    <div class="menu__icon"> <i data-lucide="activity"></i> </div>
-                                    <div class="menu__title"> Login </div>
+                                    <div class="menu__title"> List </div>
                                 </a>
                             </li>
                             <li>
-                                <a href="login-light-register.html" class="menu">
+                                <a href="{{ route('pages.create') }}" class="menu">
                                     <div class="menu__icon"> <i data-lucide="activity"></i> </div>
-                                    <div class="menu__title"> Register </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="main-light-error-page.html" class="menu">
-                                    <div class="menu__icon"> <i data-lucide="activity"></i> </div>
-                                    <div class="menu__title"> Error Page </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="side-menu-light-update-profile.html" class="menu">
-                                    <div class="menu__icon"> <i data-lucide="activity"></i> </div>
-                                    <div class="menu__title"> Update profile </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="side-menu-light-update-profile.html" class="menu">
-                                    <div class="menu__icon"> <i data-lucide="activity"></i> </div>
-                                    <div class="menu__title"> Change Password </div>
+                                    <div class="menu__title"> New page </div>
                                 </a>
                             </li>
                         </ul>
                     </li>
-                    <li class="menu__devider my-6"></li>
                     <li>
                         <a href="javascript:;" class="menu">
-                            <div class="menu__icon"> <i data-lucide="inbox"></i> </div>
-                            <div class="menu__title"> Components <i data-lucide="chevron-down" class="menu__sub-icon "></i> </div>
+                            <div class="menu__icon"> <i data-lucide="users"></i> </div>
+                            <div class="menu__title"> Blog <i data-lucide="chevron-down" class="menu__sub-icon "></i> </div>
                         </a>
                         <ul class="">
                             <li>
-                                <a href="{{ route('about.index') }}" class="menu">
+                                <a href="{{ route('blog.index') }}" class="menu">
                                     <div class="menu__icon"> <i data-lucide="activity"></i> </div>
-                                    <div class="menu__title"> About section </div>
+                                    <div class="menu__title"> List </div>
                                 </a>
                             </li>
                             <li>
-                                <a href="{{ route('middle.index') }}" class="menu">
+                                <a href="{{ route('blog.create') }}" class="menu">
                                     <div class="menu__icon"> <i data-lucide="activity"></i> </div>
-                                    <div class="menu__title"> Middle </div>
+                                    <div class="menu__title"> New post </div>
                                 </a>
                             </li>
                             <li>
-                                <a href="{{ route('slider.index') }}" class="menu">
+                                <a href="{{ route('category.index') }}" class="menu">
                                     <div class="menu__icon"> <i data-lucide="activity"></i> </div>
-                                    <div class="menu__title"> Slider </div>
+                                    <div class="menu__title"> Categories list </div>
                                 </a>
                             </li>
                         </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="menu">
+                            <div class="menu__icon"> <i data-lucide="edit"></i> </div>
+                            <div class="menu__title">
+                            Portfolio 
+                                <div class="menu__sub-icon "> <i data-lucide="chevron-down"></i> </div>
+                            </div>
+                        </a>
+                        <ul class="">
+                            <li>
+                                <a href="{{ route('portfolio.index') }}" class="menu">
+                                    <div class="menu__icon"> <i data-lucide="activity"></i> </div>
+                                    <div class="menu__title"> List </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ route('portfolio.create') }}" class="menu">
+                                    <div class="menu__icon"> <i data-lucide="activity"></i> </div>
+                                    <div class="menu__title"> New project </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ route('pcategory.index') }}" class="menu">
+                                    <div class="menu__icon"> <i data-lucide="activity"></i> </div>
+                                    <div class="menu__title"> Categories list </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="{{ route ('gallery.index') }}" class="menu">
+                            <div class="menu__icon"> <i data-lucide="file-text"></i> </div>
+                            <div class="menu__title"> logos </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('about.index') }}" class="menu">
+                            <div class="menu__icon"> <i data-lucide="activity"></i> </div>
+                            <div class="menu__title"> About section </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('middle.index') }}" class="menu">
+                            <div class="menu__icon"> <i data-lucide="activity"></i> </div>
+                            <div class="menu__title"> Middle </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('slider.index') }}" class="menu">
+                            <div class="menu__icon"> <i data-lucide="activity"></i> </div>
+                            <div class="menu__title"> Slider </div>
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -434,7 +184,7 @@
             <!-- BEGIN: Side Menu -->
             <nav class="side-nav">
                 <a href="" class="intro-x flex items-center pl-5 pt-4">
-                    <img alt="Midone - HTML Admin Template" class="w-6" src="{{asset('dist/images/logo.svg') }}">
+                    <img alt="logo" class="w-6" src="{{asset('dist/images/logo.svg') }}">
                     <span class="hidden xl:block text-white text-lg ml-3"> Webmaco </span> 
                 </a>
                 <div class="side-nav__devider my-6"></div>
@@ -447,28 +197,9 @@
                             </div>
                         </a>
                     </li>
-
-                    <li>
-                        <a href="{{ route('banner.index') }}" class="side-menu {{ (request()->is('admin/banner')) ? 'side-menu--active' : '' }}">
-                            <div class="side-menu__icon"> <i data-lucide="inbox"></i> </div>
-                            <div class="side-menu__title"> Main Banner </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="side-menu {{ (request()->is('admin/app')) ? 'side-menu--active' : '' }}">
-                            <div class="side-menu__icon"> <i data-lucide="hard-drive"></i> </div>
-                            <div class="side-menu__title"> Website settings </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ route ('gallery.index') }}" class="side-menu">
-                            <div class="side-menu__icon"> <i data-lucide="file-text"></i> </div>
-                            <div class="side-menu__title"> Portfolio / logos </div>
-                        </a>
-                    </li>
                     @can('manageUsers', App\Models\User::class)
                     <li>
-                        <a href="javascript:;" class="side-menu">
+                        <a href="javascript:;" class="side-menu {{ (request()->is('admin/users')) ? 'side-menu--active' : '' }}">
                             <div class="side-menu__icon"> <i data-lucide="users"></i> </div>
                             <div class="side-menu__title">
                                 Users 
@@ -482,55 +213,26 @@
                                     <div class="side-menu__title"> List </div>
                                 </a>
                             </li>
-                            <li>
-                                <a href="side-menu-light-users-layout-2.html" class="side-menu">
-                                    <div class="side-menu__icon"> <i data-lucide="activity"></i> </div>
-                                    <div class="side-menu__title"> Add New User </div>
-                                </a>
-                            </li>
                         </ul>
                     </li>
 
                     <li>
-                        <a href="{{ route ('menu.index') }}" class="side-menu">
+                        <a href="{{ route ('menu.index') }}" class="side-menu {{ (request()->is('admin/menu')) ? 'side-menu--active' : '' }}">
                             <div class="side-menu__icon"> <i data-lucide="file-text"></i> </div>
                             <div class="side-menu__title"> Menu </div>
                         </a>
                     </li>
                     @endcan
-                    <li class="side-nav__devider my-6"></li>
 
+                    <li class="side-nav__devider my-6"></li>
                     <li>
-                        <a href="javascript:;" class="side-menu">
-                            <div class="side-menu__icon"> <i data-lucide="trello"></i> </div>
-                            <div class="side-menu__title">
-                                Profile 
-                                <div class="side-menu__sub-icon "> <i data-lucide="chevron-down"></i> </div>
-                            </div>
+                        <a href="{{ route('banner.index') }}" class="side-menu {{ (request()->is('admin/banner')) ? 'side-menu--active' : '' }}">
+                            <div class="side-menu__icon"> <i data-lucide="inbox"></i> </div>
+                            <div class="side-menu__title"> Main Banner </div>
                         </a>
-                        <ul class="">
-                            <li>
-                                <a href="{{route ('changePasswordPost')}}" class="menu">
-                                    <div class="menu__icon"> <i data-lucide="activity"></i> </div>
-                                    <div class="menu__title"> Change Password </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="side-menu-light-profile-overview-2.html" class="side-menu">
-                                    <div class="side-menu__icon"> <i data-lucide="activity"></i> </div>
-                                    <div class="side-menu__title"> Overview 2 </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="side-menu-light-profile-overview-3.html" class="side-menu">
-                                    <div class="side-menu__icon"> <i data-lucide="activity"></i> </div>
-                                    <div class="side-menu__title"> Overview 3 </div>
-                                </a>
-                            </li>
-                        </ul>
                     </li>
                     <li>
-                        <a href="javascript:;" class="side-menu {{ (request()->is('admin/pages')) ? 'side-menu--active' : '' }}"">
+                        <a href="javascript:;" class="side-menu {{ (request()->is('admin/pages')) ? 'side-menu--active' : '' }}">
                             <div class="side-menu__icon"> <i data-lucide="layout"></i> </div>
                             <div class="side-menu__title">
                                 Pages 
@@ -550,11 +252,10 @@
                                     <div class="side-menu__title"> New page </div>
                                 </a>
                             </li>
-                            <li>
                         </ul>
                     </li>
                     <li>
-                        <a href="#" class="side-menu">
+                        <a href="#" class="side-menu {{ (request()->is('admin/blog')) ? 'side-menu--active' : '' }}"">
                             <div class="side-menu__icon"> <i data-lucide="file-text"></i> </div>
                                 <div class="side-menu__title">
                                     Blog 
@@ -584,7 +285,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="javascript:;" class="side-menu">
+                        <a href="javascript:;" class="side-menu {{ (request()->is('admin/portfolio')) ? 'side-menu--active' : '' }}">
                             <div class="side-menu__icon"> <i data-lucide="edit"></i> </div>
                             <div class="side-menu__title">
                             Portfolio 
@@ -613,65 +314,35 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="javascript:;" class="side-menu">
-                            <div class="side-menu__icon"> <i data-lucide="star"></i> </div>
-                            <div class="side-menu__title">
-                            Partners 
-                                <div class="side-menu__sub-icon "> <i data-lucide="chevron-down"></i> </div>
-                            </div>
+                        <a href="{{ route ('gallery.index') }}" class="side-menu {{ (request()->is('admin/gallery')) ? 'side-menu--active' : '' }}">
+                            <div class="side-menu__icon"> <i data-lucide="file-text"></i> </div>
+                            <div class="side-menu__title"> logos </div>
                         </a>
-                        <ul class="">
-                            <li>
-                                <a href="{{ route('partners.index') }}" class="side-menu">
-                                    <div class="side-menu__icon"> <i data-lucide="activity"></i> </div>
-                                    <div class="side-menu__title"> List </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{{ route('partners.create') }}" class="side-menu">
-                                    <div class="side-menu__icon"> <i data-lucide="activity"></i> </div>
-                                    <div class="side-menu__title"> New partner </div>
-                                </a>
-                            </li>
-                        </ul>
                     </li>
-                    <li class="side-nav__devider my-6"></li>
                     <li>
-                        <a href="javascript:;" class="side-menu">
-                            <div class="side-menu__icon"> <i data-lucide="inbox"></i> </div>
+                        <a href="{{ route('about.index') }}" class="side-menu {{ (request()->is('admin/about')) ? 'side-menu--active' : '' }}">
+                            <div class="side-menu__icon"> <i data-lucide="activity"></i> </div>
                             <div class="side-menu__title">
-                                Components 
-                                <div class="side-menu__sub-icon "> <i data-lucide="chevron-down"></i> </div>
+                                About section 
                             </div>
                         </a>
-                        <ul class="">
-                            <li>
-                                <a href="{{ route('about.index') }}" class="side-menu">
-                                    <div class="side-menu__icon"> <i data-lucide="activity"></i> </div>
-                                    <div class="side-menu__title">
-                                        About section 
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{{ route('middle.index') }}" class="side-menu">
-                                    <div class="side-menu__icon"> <i data-lucide="activity"></i> </div>
-                                    <div class="side-menu__title">
-                                        Middle section 
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{{ route('slider.index') }}" class="side-menu">
-                                    <div class="side-menu__icon"> <i data-lucide="activity"></i> </div>
-                                    <div class="side-menu__title">
-                                        Slider
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
                     </li>
-
+                    <li>
+                        <a href="{{ route('middle.index') }}" class="side-menu {{ (request()->is('admin/middle')) ? 'side-menu--active' : '' }}">
+                            <div class="side-menu__icon"> <i data-lucide="activity"></i> </div>
+                            <div class="side-menu__title">
+                                Middle section 
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('slider.index') }}" class="side-menu {{ (request()->is('admin/slider')) ? 'side-menu--active' : '' }}">
+                            <div class="side-menu__icon"> <i data-lucide="activity"></i> </div>
+                            <div class="side-menu__title">
+                                About Slider
+                            </div>
+                        </a>
+                    </li>
                 </ul>
             </nav>
             <!-- END: Side Menu -->
@@ -687,94 +358,6 @@
                         </ol>
                     </nav>
                     <!-- END: Breadcrumb -->
-                    <!-- BEGIN: Search -->
-                    <div class="intro-x relative mr-3 sm:mr-6">
-                        <div class="search hidden sm:block">
-                            <input type="text" class="search__input form-control border-transparent" placeholder="Search...">
-                            <i data-lucide="search" class="search__icon dark:text-slate-500"></i> 
-                        </div>
-                        <a class="notification sm:hidden" href=""> <i data-lucide="search" class="notification__icon dark:text-slate-500"></i> </a>
-                        <div class="search-result">
-                            <div class="search-result__content">
-                                <div class="search-result__content__title">Pages</div>
-                                <div class="mb-5">
-                                    <a href="" class="flex items-center">
-                                        <div class="w-8 h-8 bg-success/20 dark:bg-success/10 text-success flex items-center justify-center rounded-full"> <i class="w-4 h-4" data-lucide="inbox"></i> </div>
-                                        <div class="ml-3">Mail Settings</div>
-                                    </a>
-                                    <a href="" class="flex items-center mt-2">
-                                        <div class="w-8 h-8 bg-pending/10 text-pending flex items-center justify-center rounded-full"> <i class="w-4 h-4" data-lucide="users"></i> </div>
-                                        <div class="ml-3">Users & Permissions</div>
-                                    </a>
-                                    <a href="" class="flex items-center mt-2">
-                                        <div class="w-8 h-8 bg-primary/10 dark:bg-primary/20 text-primary/80 flex items-center justify-center rounded-full"> <i class="w-4 h-4" data-lucide="credit-card"></i> </div>
-                                        <div class="ml-3">Transactions Report</div>
-                                    </a>
-                                </div>
-                                <div class="search-result__content__title">Users</div>
-                                <div class="mb-5">
-                                    <a href="" class="flex items-center mt-2">
-                                        <div class="w-8 h-8 image-fit">
-                                            <img alt="Midone - HTML Admin Template" class="rounded-full" src="{{ asset ('dist/images/profile-7.jpg') }}">
-                                        </div>
-                                        <div class="ml-3">Kevin Spacey</div>
-                                        <div class="ml-auto w-48 truncate text-slate-500 text-xs text-right">kevinspacey@left4code.com</div>
-                                    </a>
-                                    <a href="" class="flex items-center mt-2">
-                                        <div class="w-8 h-8 image-fit">
-                                            <img alt="Midone - HTML Admin Template" class="rounded-full" src="{{ asset ('dist/images/profile-2.jpg') }}">
-                                        </div>
-                                        <div class="ml-3">Johnny Depp</div>
-                                        <div class="ml-auto w-48 truncate text-slate-500 text-xs text-right">johnnydepp@left4code.com</div>
-                                    </a>
-                                    <a href="" class="flex items-center mt-2">
-                                        <div class="w-8 h-8 image-fit">
-                                            <img alt="Midone - HTML Admin Template" class="rounded-full" src="{{ asset ('dist/images/profile-5.jpg') }}">
-                                        </div>
-                                        <div class="ml-3">Johnny Depp</div>
-                                        <div class="ml-auto w-48 truncate text-slate-500 text-xs text-right">johnnydepp@left4code.com</div>
-                                    </a>
-                                    <a href="" class="flex items-center mt-2">
-                                        <div class="w-8 h-8 image-fit">
-                                            <img alt="Midone - HTML Admin Template" class="rounded-full" src="{{ asset ('dist/images/profile-9.jpg') }}">
-                                        </div>
-                                        <div class="ml-3">Morgan Freeman</div>
-                                        <div class="ml-auto w-48 truncate text-slate-500 text-xs text-right">morganfreeman@left4code.com</div>
-                                    </a>
-                                </div>
-                                <div class="search-result__content__title">Products</div>
-                                <a href="" class="flex items-center mt-2">
-                                    <div class="w-8 h-8 image-fit">
-                                        <img alt="Midone - HTML Admin Template" class="rounded-full" src="{{ asset ('dist/images/preview-9.jpg') }}">
-                                    </div>
-                                    <div class="ml-3">Oppo Find X2 Pro</div>
-                                    <div class="ml-auto w-48 truncate text-slate-500 text-xs text-right">Smartphone &amp; Tablet</div>
-                                </a>
-                                <a href="" class="flex items-center mt-2">
-                                    <div class="w-8 h-8 image-fit">
-                                        <img alt="Midone - HTML Admin Template" class="rounded-full" src="{{ asset ('dist/images/preview-1.jpg') }}">
-                                    </div>
-                                    <div class="ml-3">Nikon Z6</div>
-                                    <div class="ml-auto w-48 truncate text-slate-500 text-xs text-right">Photography</div>
-                                </a>
-                                <a href="" class="flex items-center mt-2">
-                                    <div class="w-8 h-8 image-fit">
-                                        <img alt="Midone - HTML Admin Template" class="rounded-full" src="{{ asset ('dist/images/preview-2.jpg') }}">
-                                    </div>
-                                    <div class="ml-3">Sony Master Series A9G</div>
-                                    <div class="ml-auto w-48 truncate text-slate-500 text-xs text-right">Electronic</div>
-                                </a>
-                                <a href="" class="flex items-center mt-2">
-                                    <div class="w-8 h-8 image-fit">
-                                        <img alt="Midone - HTML Admin Template" class="rounded-full" src="{{ asset ('dist/images/preview-8.jpg') }}">
-                                    </div>
-                                    <div class="ml-3">Dell XPS 13</div>
-                                    <div class="ml-auto w-48 truncate text-slate-500 text-xs text-right">PC &amp; Laptop</div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- END: Search -->
                     <!-- BEGIN: Account Menu -->
                     <div class="intro-x dropdown w-8 h-8">
                         <div class="dropdown-toggle w-8 h-8 rounded-full overflow-hidden shadow-lg image-fit zoom-in" role="button" aria-expanded="false" data-tw-toggle="dropdown">
@@ -789,23 +372,17 @@
                             <ul class="dropdown-content bg-primary text-white">
                                 <li class="p-2">
                                     <div class="font-medium"> {{ Auth::user()->name }}</div>
-                                    <div class="text-xs text-white/70 mt-0.5 dark:text-slate-500">Job title</div>
                                 </li>
                                 <li>
                                     <hr class="dropdown-divider border-white/[0.08]">
                                 </li>
                                 <li>
-                                    <a href="" class="dropdown-item hover:bg-white/5"> <i data-lucide="user" class="w-4 h-4 mr-2"></i> Profile </a>
+                                    <a href="{{route ('changePasswordPost')}}" class="dropdown-item hover:bg-white/5"> <i data-lucide="user" class="w-4 h-4 mr-2"></i> Profile </a>
                                 </li>
                                 <li>
-                                    <a href="" class="dropdown-item hover:bg-white/5"> <i data-lucide="edit" class="w-4 h-4 mr-2"></i> Add Account </a>
+                                    <a href="{{route ('changePasswordPost')}}" class="dropdown-item hover:bg-white/5"> <i data-lucide="lock" class="w-4 h-4 mr-2"></i> Change Password </a>
                                 </li>
-                                <li>
-                                    <a href="" class="dropdown-item hover:bg-white/5"> <i data-lucide="lock" class="w-4 h-4 mr-2"></i> Reset Password </a>
-                                </li>
-                                <li>
-                                    <a href="" class="dropdown-item hover:bg-white/5"> <i data-lucide="help-circle" class="w-4 h-4 mr-2"></i> Help </a>
-                                </li>
+                                
                                 <li>
                                     <hr class="dropdown-divider border-white/[0.08]">
                                 </li>
@@ -840,15 +417,10 @@
             </div>
             <!-- END: Content -->
         </div>
-        <!-- BEGIN: Dark Mode Switcher-->
-        <div data-url="side-menu-dark-dashboard-overview-1.html" class="dark-mode-switcher cursor-pointer shadow-md fixed bottom-0 right-0 box border rounded-full w-40 h-12 flex items-center justify-center z-50 mb-10 mr-10">
-            <div class="mr-4 text-slate-600 dark:text-slate-200">Dark Mode</div>
-            <div class="dark-mode-switcher__toggle border"></div>
-        </div>
-        <!-- END: Dark Mode Switcher-->
         
         @yield('scripts')
-        
+
+        <!-- Scripts -->
         <script src="//cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
         <script type="text/javascript">
             $(document).ready(function () {
@@ -857,7 +429,7 @@
         </script>
         <!-- Scripts -->
         <script src="{{ asset('dist/js/app.js') }}"></script>
-                    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
     </body>
 </body>
 </html>

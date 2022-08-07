@@ -18,6 +18,7 @@
     <div class="overlay"></div>
 </section>
 
+<!-- BEGIN: Header section -->
 <nav class="navbar navbar-expand-lg bg-light shadow-lg">
     <div class="container">
         <a class="navbar-brand" href="/">
@@ -29,26 +30,11 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav mx-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="/">Home</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="about.html">About</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="gallery.html">Gallery</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact Me</a>
-                </li>
-            </ul>
+            @include('partials.menu') 
         </div>
     </div>
 </nav>
+<!-- END: Header section -->
 
 <section class="news-detail section-padding">
     <div class="container">
